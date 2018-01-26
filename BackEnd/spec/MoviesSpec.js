@@ -1,4 +1,22 @@
 
+describe("Movie", () => {
+  var Movie = require('../lib/Movie');
+  var movie;
+
+  beforeEach(() => {
+    movie = new Movie();
+  });
+
+  describe("initialise", () => {
+    it("has an empty title, poster and overview", () => {
+      expect(movie.showTitle()).toEqual('');
+      expect(movie.showPoster()).toEqual('');
+      expect(movie.showOverview()).toEqual('');
+    });
+  });
+});
+
+
 describe("Movies", () => {
   var Movies = require('../lib/Movies');
   var movies;

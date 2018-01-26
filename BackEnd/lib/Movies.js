@@ -3,7 +3,7 @@
 class Movies {
   constructor() {
     this.list = [];
-    this.currentMovie = []
+    this.currentMovie = [];
   }
 
   showList() {
@@ -19,9 +19,8 @@ class Movies {
         this.currentMovie.push(movie);
       }
     });
-    return this.currentMovie
+    return this.currentMovie;
   }
 }
-
 
 module.exports = Movies;
