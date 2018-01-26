@@ -1,5 +1,6 @@
 
 describe("Movies", function() {
+  var Movies = require('../lib/Movies')
   var movies;
 
   beforeEach(function() {
@@ -10,5 +11,6 @@ describe("Movies", function() {
     it("has an empty movies list", function() {
       expect(movies.showList()).toEqual([]);
     });
+
   });
 });
