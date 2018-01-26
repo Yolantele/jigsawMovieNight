@@ -1,10 +1,12 @@
 
 describe("Movies", () => {
-  var Movies = require('../lib/Movies')
+  var Movies = require('../lib/Movies');
   var movies;
+  var movie = {};
 
   beforeEach(() => {
     movies = new Movies();
+
   });
 
   describe("initialise", () => {
@@ -13,8 +15,12 @@ describe("Movies", () => {
     });
   });
   it('adds a movie to list', () => {
-    movie = {}
-    movies.add(movie)
-    expect(movies._list.length).toEqual(1)
-  })
+    movies.add(movie);
+    expect(movies.list.length).toEqual(1);
+  });
+  it('finds chosen movie', () => {
+    movies.add(movie);
+    movies.findMovie(movie);
+    expect(movies.currentMovie).toEqual([movie])
+  });
 });

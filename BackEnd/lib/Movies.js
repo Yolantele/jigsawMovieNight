@@ -1,19 +1,27 @@
-"use strict";
+'use strict';
 
 class Movies {
-  constructor () {
-    this._list = []
+  constructor() {
+    this.list = [];
+    this.currentMovie = []
   }
-  showList () {
-    return this._list
+
+  showList() {
+    return this.list;
   }
 
   add(movie) {
-    this._list.push(movie);
+    this.list.push(movie);
+  }
+  findMovie(chosenMovie) {
+    this.list.forEach((movie) => {
+      if (movie === chosenMovie) {
+        this.currentMovie.push(movie);
+      }
+    });
+    return this.currentMovie
   }
 }
-
-
 
 
 module.exports = Movies;
