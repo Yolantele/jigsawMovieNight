@@ -8,6 +8,9 @@ class Movies {
     return this._list
   }
 
+  add(movie) {
+    this._list.push(movie);
+  }
 }
 
 
