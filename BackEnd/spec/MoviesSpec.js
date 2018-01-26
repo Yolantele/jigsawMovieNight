@@ -1,6 +1,5 @@
 
 describe("Movies", function() {
-  // var Movies;
   var movies;
 
   beforeEach(function() {
