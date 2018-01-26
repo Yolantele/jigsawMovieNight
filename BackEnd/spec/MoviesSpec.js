@@ -1,8 +1,6 @@
-"use strict";
 
 describe("Movies", function() {
-
-  var Movies;
+  // var Movies;
   var movies;
 
   beforeEach(function() {
@@ -10,8 +8,8 @@ describe("Movies", function() {
   });
 
   describe("initialise", function() {
-    it("should be an instance of movies", function() {
-      expect(movies).toEqual(new Movies);
+    it("has an empty movies list", function() {
+      expect(movies.showList()).toEqual([]);
     });
   });
 });
